@@ -15,6 +15,7 @@ import { RegisterComponent } from './pages/register/register.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { NavigationComponent } from './pages/main/navigation/navigation.component';
 import { UserComponent } from './pages/main/user/user.component';
+import { LinksComponent } from './pages/main/links/links.component';
 
 
 const InitializeConfig = (appConfig: ConfigurationService) => {
@@ -32,7 +33,8 @@ const InitializeConfig = (appConfig: ConfigurationService) => {
     RegisterComponent,
     DashboardComponent,
     NavigationComponent,
-    UserComponent
+    UserComponent,
+    LinksComponent
   ],
   imports: [
     BrowserModule,
