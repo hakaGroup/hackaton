@@ -1,11 +1,16 @@
+<head>
+    <link rel = "stylesheet" href = "login.component.css">
+</head>
+
 <body>
     <div id = "login">
-        <div class = "login-panels">
+        <div id = "login-items">
             <div><input class = "search-bar" type="email" placeholder="email" [(ngModel)]="login.email"/></div>
             <div><input class = "search-bar" type="password" placeholder="hasło" [(ngModel)]="login.password"/></div>
             <div><button class = "button" (click)="onLogin()">Zaloguj się</button></div>
+            <p class = "text">Nie masz konta? <a href = "https://youtu.be/YdfNuwMhMg4">Zarejestruj się</a></p>
         </div>
         <div id = "menu-background-pattern"></div>
-        <div class="login-background-image"></div>
+        <div class = "login-background-image"></div>
     </div>
 </body>
