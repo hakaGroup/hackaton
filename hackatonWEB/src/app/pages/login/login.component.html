@@ -1,3 +1,11 @@
-<input type="email" placeholder="email" [(ngModel)]="login.email"/>
-<input type="password" placeholder="password" [(ngModel)]="login.password"/>
-<button (click)="onLogin()">Login</button>
+<body>
+    <div id = "login">
+        <div class = "login-panels">
+            <div><input class = "search-bar" type="email" placeholder="email" [(ngModel)]="login.email"/></div>
+            <div><input class = "search-bar" type="password" placeholder="hasło" [(ngModel)]="login.password"/></div>
+            <div><button class = "button" (click)="onLogin()">Zaloguj się</button></div>
+        </div>
+        <div id = "menu-background-pattern"></div>
+        <div class="login-background-image"></div>
+    </div>
+</body>

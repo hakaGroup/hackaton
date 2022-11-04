@@ -1,0 +1,57 @@
+.login-panels{
+    justify-content: center;
+    align-items: center;
+    margin-left: 2rem;
+    flex-direction: column;
+    display: flex;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    gap: 0.7rem;
+    z-index: 1;
+    border-style: none;
+}
+
+.search-bar{
+    size: 300px;
+    border-radius: 2rem;
+    border-style: none;
+    padding: 0.5rem 0rem 0.5rem 1rem;
+}
+
+.search-bar:focus{
+    outline-style: solid;
+    outline-color: #84DCC6;
+}
+
+.button{
+    background-color: #84DCC6;
+    outline-style: none;
+    outline-color: #84DCC6;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    padding: 0.5rem 2rem;
+    border-style: inherit;
+    opacity: 0.7;
+    transition: opacity 400ms ease;
+}
+
+.button:hover{
+    opacity: 1;
+}
+
+.login-background-image {
+    background-image: url("https://static.wikia.nocookie.net/metalgear/images/9/98/ArmstrongPortraitCigar.png/revision/latest/scale-to-width-down/838?cb=20220711113900");
+    background-position: center 40%;
+    background-size: 110vmax;
+    height: 100%;
+    left: 0px;
+    opacity: 0.15;
+    position: absolute;
+    top: 0px;
+    transition: opacity 800ms ease,
+      background-size 800ms ease,
+      background-position 800ms ease;
+    width: 100%;
+    z-index: 0;
+}
