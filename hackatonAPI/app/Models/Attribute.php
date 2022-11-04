@@ -10,6 +10,9 @@ class Attribute extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name'
+        'name',
+        'type_id',
+        'is_required',
+        'critical_value'
     ];
 }
