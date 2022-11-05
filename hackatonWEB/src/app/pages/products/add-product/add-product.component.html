@@ -1,9 +1,18 @@
-<input type="text" placeholder="Nazwa produktu" [(ngModel)]="product.name"/>
-<mat-select [(ngModel)]="selectedAttribute" placeholder="wybierz cechę">
-    <mat-option *ngFor="let attr of attributes" [value]="attr">
-        {{attr.name}}
-    </mat-option>
-</mat-select>
-<button (click)="addAttribute()">Dodaj cechę</button>
+<div class = 'prostokat'>
+    <input class = "input" type="text" placeholder="Nazwa produktu" [(ngModel)]="product.name"/>
+    <div class = "row">
+        <div class="col-8">
+            <mat-select class="select" [(ngModel)]="selectedAttribute" placeholder="wybierz cechę">
+                <mat-option *ngFor="let attr of attributes" [value]="attr">
+                    {{attr.name}}
+                </mat-option>
+            </mat-select> 
+        </div>
+        <div class="col-4">
+            <button class = "dodaj-ceche" (click)="addAttribute()">Dodaj cechę</button>
+        </div>
+    </div>
+    
 
-<button (click)="save()">Dodaj</button>
+    <button class="dodaj" (click)="save()">Dodaj</button>
+</div>
