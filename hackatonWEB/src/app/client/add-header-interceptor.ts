@@ -13,6 +13,7 @@ export class AddHeaderInterceptor implements HttpInterceptor {
             clonedRequest = req.clone({
                 headers: req.headers.append('Authorization', `Bearer ${token}`)
             });
+            req=clonedRequest;
         }
 
         return next.handle(req);
