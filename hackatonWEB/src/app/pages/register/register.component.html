@@ -2,14 +2,20 @@
     <div class="navbar-brand">FRIDŻUŚ OwO</div>
 </div>
 
-
-<div class="input-fields">
-    <div class="input"><input class = "field-input" type="text" placeholder="name" [(ngModel)]="register.name"/></div>
-    <div class="input"><input class = "field-input" type="email" placeholder="email" [(ngModel)]="register.email"/></div>
-    <div class="input"><input class = "field-input" type="password" placeholder="password" [(ngModel)]="register.password"/></div>
-    <div class="input"><input class = "field-input" type="password" placeholder="confirm password" [(ngModel)]="register.password_confirmation"/></div>
-    <div class="input"><button class = "register" (click)="onRegister()">Register</button></div>
-</div>
-<div class = "error-message" *ngIf="error">
-    {{error.message}}
+<div class="row">
+    <div class="col-md-6">
+        <div class="input-fields">
+            <div class="input"><input class = "field-input" type="text" placeholder="name" [(ngModel)]="register.name"/></div>
+            <div class="input"><input class = "field-input" type="email" placeholder="email" [(ngModel)]="register.email"/></div>
+            <div class="input"><input class = "field-input" type="password" placeholder="password" [(ngModel)]="register.password"/></div>
+            <div class="input"><input class = "field-input" type="password" placeholder="confirm password" [(ngModel)]="register.password_confirmation"/></div>
+            <div class="input"><button class = "register" (click)="onRegister()">Register</button></div>
+        </div>
+        <div class = "error-message" *ngIf="error">
+            {{error.message}}
+        </div>
+    </div>
+    <div class="col-md-6">
+        <img class = "lodowka2" src="assets/images/lodowka2.png" alt="">
+    </div>
 </div>
