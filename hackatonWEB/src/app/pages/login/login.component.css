@@ -67,3 +67,21 @@
     opacity: 1;
     cursor: pointer;
 }
+
+
+
+.login-background-image {
+    background-image: url("https://firstaustria.pl/1491-large_default/xlodowka-turystyczna-samochodowa-duza-40-l-first.jpg.pagespeed.ic.QinSZ1pODP.jpg");
+    background-position: center 40%;
+    background-size: 110vmax;
+    height: 100%;
+    left: 0px;
+    opacity: 0.15;
+    position: absolute;
+    top: 0px;
+    transition: opacity 800ms ease,
+      background-size 800ms ease,
+      background-position 800ms ease;
+    width: 100%;
+    z-index: 0;
+}
