@@ -27,13 +27,10 @@ class ProductController extends Controller
             $newProduct = new Product();
             $newProduct->name = $request->name;
             $newProduct->save();
-        return response()->json(['test' => $request->attributes], 200);
-            foreach ($request->attributes as $attribute) {
+            foreach ($request->get('attributes') as $attribute) {
                 $newProductAttributes = new Products_attribute();
                 $newProductAttributes->product_id = $newProduct->id;
-                $newProductAttributes->attribute_id = $attribute->id;
-                // $newProductAttributes->name -> $attribute->name;
-                // $newProductAttributes->is_required -> $attribute->is_required;
+                $newProductAttributes->attribute_id = $attribute['id'];
                 $newProductAttributes->save();
             }
         }
