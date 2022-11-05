@@ -1,0 +1,87 @@
+.text{
+    font-size: 12px;
+    font-family: 'Heebo', sans-serif;
+}
+
+.nav{
+    font-size: 2rem;
+    background-color: #BFEDEF;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#login{
+    align-items: center;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+#login-items{
+    margin-bottom: clamp(4rem, 20vh, 48rem);
+    margin-left: clamp(4rem, 20vw, 48rem);
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    display: flex;
+    gap: 0.5rem;
+    z-index: 1;
+}
+
+.search-bar{
+    padding: 1rem, 0rem, 1rem, 2rem;
+    margin-bottom: 10px;
+    width: 20rem;
+    height: 3rem;
+    border-radius: 2rem;
+    border: 1px solid;
+    border-color: hsl(0, 0%, 18.82%);   
+    padding: 0.5rem 0rem 0.5rem 1.5rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.search-bar:focus{
+    outline-color: #84DCC6;
+
+}
+
+.button{
+    width: 12rem;
+    height: 3rem;
+    background-color: #84DCC6;
+    outline-style: none;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    padding: 0.5rem 2rem;
+    border-style: inherit;
+    opacity: 0.7;
+    transition: opacity 400ms ease;
+    z-index: 1;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.button:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+
+
+.login-background-image {
+    background-image: url("https://firstaustria.pl/1491-large_default/xlodowka-turystyczna-samochodowa-duza-40-l-first.jpg.pagespeed.ic.QinSZ1pODP.jpg");
+    background-position: center 40%;
+    background-size: 110vmax;
+    height: 100%;
+    left: 0px;
+    opacity: 0.15;
+    position: absolute;
+    top: 0px;
+    transition: opacity 800ms ease,
+      background-size 800ms ease,
+      background-position 800ms ease;
+    width: 100%;
+    z-index: 0;
+}
