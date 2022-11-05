@@ -93,8 +93,9 @@ tr.example-element-row:not(.example-expanded-row):active {
 }
 
 .attribute{
-
     padding: 0rem 1rem 1rem 1rem;
+}
+
 .img-cont{
     position: absolute;
     height: 90vh;
