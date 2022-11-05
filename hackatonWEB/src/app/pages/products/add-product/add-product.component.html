@@ -1,2 +1,9 @@
 <input type="text" placeholder="Nazwa produktu" [(ngModel)]="product.name"/>
+<mat-select [(ngModel)]="selectedAttribute" placeholder="wybierz cechę">
+    <mat-option *ngFor="let attr of attributes" [value]="attr">
+        {{attr.name}}
+    </mat-option>
+</mat-select>
+<button (click)="addAttribute()">Dodaj cechę</button>
+
 <button (click)="save()">Dodaj</button>

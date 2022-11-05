@@ -24,6 +24,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatTableModule} from '@angular/material/table';
 import {MatIconModule} from '@angular/material/icon';
 import { AddProductComponent } from './pages/products/add-product/add-product.component';
+import { MatSelectModule } from '@angular/material/select';
 
 
 const InitializeConfig = (appConfig: ConfigurationService) => {
@@ -55,7 +56,8 @@ const InitializeConfig = (appConfig: ConfigurationService) => {
     CommonModule,
     BrowserAnimationsModule,
     MatTableModule,
-    MatIconModule
+    MatIconModule,
+    MatSelectModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
