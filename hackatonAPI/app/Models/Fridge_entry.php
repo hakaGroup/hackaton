@@ -11,6 +11,6 @@ class Fridge_entry extends Model
 
     protected $fillabe = [
       'user_id',
-      'ent_id'
+      'entry_id'
     ];
 }

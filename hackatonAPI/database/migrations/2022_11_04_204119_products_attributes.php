@@ -16,6 +16,7 @@ class ProductsAttributes extends Migration
         Schema::create('products_attributes', function (Blueprint $table) {
             $table->unsignedBigInteger('product_id');
             $table->unsignedBigInteger('attribute_id');
+            $table->timestamps();
         });
 
         Schema::table('products_attributes', function (Blueprint $table){

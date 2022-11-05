@@ -17,6 +17,7 @@ class ListEntries extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('entry_id');
+            $table->timestamps();
         });
 
         Schema::table('list_entries', function (Blueprint $table){

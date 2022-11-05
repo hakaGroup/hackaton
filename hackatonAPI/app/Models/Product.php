@@ -12,4 +12,5 @@ class Product extends Model
     protected $fillabe = [
       'name'
     ];
+
 }

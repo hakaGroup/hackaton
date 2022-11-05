@@ -10,7 +10,7 @@ class Products_attribute extends Model
     use HasFactory;
 
     protected $fillabe = [
-      'prod_id',
-      'attr_id'
+      'product_id',
+      'attribute_id'
     ];
 }
