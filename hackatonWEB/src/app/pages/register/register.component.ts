@@ -11,6 +11,7 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class RegisterComponent implements OnInit {
   register: Register;
+  error: any;
 
   constructor(private authService: AuthService,
               private userService: UserService,
@@ -28,6 +29,8 @@ export class RegisterComponent implements OnInit {
   onRegister() {
     this.userService.registerUser(this.register, () => {
       this.router.navigate(['/panel']);
-    }, () => {});
+    }, (error) => {
+      this.error = error;
+    });
   }
 }

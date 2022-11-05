@@ -10,6 +10,7 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class LoginComponent implements OnInit {
   login: Login;
+  error: any;
 
   constructor(private authService: AuthService,
               private router: Router) {
@@ -26,6 +27,8 @@ export class LoginComponent implements OnInit {
   onLogin() {
     this.authService.loginUser(this.login, () => {
       this.router.navigate(['/panel']);
-    }, () => {});
+    }, (error) => {
+      this.error = error;
+    });
   }
 }

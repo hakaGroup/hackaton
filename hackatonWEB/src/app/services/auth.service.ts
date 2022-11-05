@@ -16,13 +16,13 @@ export class AuthService {
     this.token = localStorage.getItem(this.TOKEN_KEY)!;
   }
   
-  public loginUser(login: Login, onLogin: () => void, onError: (error: string) => void) {
+  public loginUser(login: Login, onLogin: () => void, onError: (error: any) => void) {
     this.authClient.loginUser(login).subscribe(data => {
       this.token = data.token;
       localStorage.setItem(this.TOKEN_KEY, this.token);
       onLogin();
-    }, error => {
-      onError(error);
+    }, (error) => {
+      onError(error.error);
     });
   }
 
