@@ -81,7 +81,7 @@ class EntryController extends Controller
 
         foreach ($userEntryIDs as $entryID)
         {
-            $entry = EntryController::getEntry($userID)->original;
+            $entry = EntryController::getEntry($entryID->id)->original;
             array_push($entries, $entry);
         }
         return $entries;
