@@ -11,7 +11,6 @@ class Products_attribute extends Model
 
     protected $fillabe = [
       'product_id',
-      'attribute_id',
-      'critical_value'
+      'attribute_id'
     ];
 }

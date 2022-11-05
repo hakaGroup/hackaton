@@ -35,4 +35,6 @@ Route::middleware('auth:sanctum')->group(function(){
 
     Route::post('/entry/add', [EntryController::class, 'addEntry']);
     Route::get('/entry/get/{id}', [EntryController::class, 'getEntry']);
+    Route::get('/entry/user/get', [EntryController::class, 'getAllUserEntries']);
+
 });
