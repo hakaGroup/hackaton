@@ -49,7 +49,7 @@ class EntryController extends Controller
         if ($entry)
         {
             $product = Product::where('id', $entry->product_id)->first();
-            $entryAttributes = Entry_attribute_value::select('value', 'attribute_id')->where('entry_id', $entry->id)->get()
+            $entryAttributes = Entry_attribute_value::select('value', 'attribute_id', 'critical_value')->where('entry_id', $entry->id)->get()
             ->toArray();
 
             $attributes = [];
