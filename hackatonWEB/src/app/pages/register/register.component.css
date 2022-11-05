@@ -46,3 +46,13 @@
 .register:hover{
     opacity: 1;
 }
+
+.error-message{
+    font-size: 1.5rem;
+    background-color: rgb(232, 114, 114);
+    padding: 1rem 2rem 1rem 2rem;
+    border-radius: 5rem;
+    position: absolute;
+    top: 10%;
+    right: 1%;
+}
