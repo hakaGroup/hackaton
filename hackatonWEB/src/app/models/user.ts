@@ -1,5 +1,3 @@
-import { Timestamp } from "rxjs";
-
 export class User {
     public id: number;
     public name: string;

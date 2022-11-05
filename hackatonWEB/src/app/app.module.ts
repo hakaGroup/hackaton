@@ -1,5 +1,5 @@
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
-import { APP_INITIALIZER, NgModule } from '@angular/core';
+import { APP_INITIALIZER, ErrorHandler, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -16,6 +16,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { NavigationComponent } from './pages/main/navigation/navigation.component';
 import { UserComponent } from './pages/main/user/user.component';
 import { LinksComponent } from './pages/main/links/links.component';
+import { CommonModule } from '@angular/common';
 
 
 const InitializeConfig = (appConfig: ConfigurationService) => {
@@ -23,7 +24,6 @@ const InitializeConfig = (appConfig: ConfigurationService) => {
     return appConfig.loadConfig();
   }
 }
-
 
 @NgModule({
   declarations: [
@@ -40,7 +40,8 @@ const InitializeConfig = (appConfig: ConfigurationService) => {
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    CommonModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
