@@ -17,7 +17,7 @@ class ProductController extends Controller
 
             if($attributes == $request->attributes)
             {
-                found = True;
+                $found = True;
             }
         }
 
