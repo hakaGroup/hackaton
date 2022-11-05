@@ -19,6 +19,7 @@
     top:30%;
     left:15%;
     width: 25rem;
+    align-items: center;
 }
 .input{
     width: 100%;

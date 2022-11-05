@@ -1,3 +1,13 @@
+.img-cont{
+    position: absolute;
+    height: 90vh;
+    width: 100%;
+    background-image: url('/assets/images/lodowka1.png');
+    background-repeat: no-repeat;
+    background-position: 50% 20%;
+    opacity: 0.1;
+}
+
 table {
     border-style: solid;
     width: 97%;
