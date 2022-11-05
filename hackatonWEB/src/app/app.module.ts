@@ -20,6 +20,9 @@ import { CommonModule } from '@angular/common';
 import { GroceryListComponent } from './pages/grocery-list/grocery-list.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { FridgeComponent } from './pages/fridge/fridge.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatTableModule} from '@angular/material/table';
+import {MatIconModule} from '@angular/material/icon'
 
 
 const InitializeConfig = (appConfig: ConfigurationService) => {
@@ -40,14 +43,17 @@ const InitializeConfig = (appConfig: ConfigurationService) => {
     LinksComponent,
     GroceryListComponent,
     ProductsComponent,
-    FridgeComponent,
+    FridgeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    CommonModule
+    CommonModule,
+    BrowserAnimationsModule,
+    MatTableModule,
+    MatIconModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,

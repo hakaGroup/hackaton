@@ -13,7 +13,7 @@ export class UserService {
     this.userClientService.registerUser(register).subscribe(data => {
       onRegister();
     }, error => {
-      onError(error);
+      onError(error.error);
     });
   }
 }
