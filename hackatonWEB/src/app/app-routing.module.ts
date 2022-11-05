@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuardService } from './client/auth-guard.service';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { AddEntryComponent } from './pages/fridge/add-entry/add-entry.component';
 import { FridgeComponent } from './pages/fridge/fridge.component';
 import { GroceryListComponent } from './pages/grocery-list/grocery-list.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -22,7 +23,8 @@ const routes: Routes = [
       { path: 'fridge', component: FridgeComponent },
       { path: 'grocery-list', component: GroceryListComponent },
       { path: 'products', component: ProductsComponent },
-      { path: 'products/add', component: AddProductComponent }
+      { path: 'products/add', component: AddProductComponent },
+      { path: 'fridge/add', component: AddEntryComponent}
     ]
   }
 ];

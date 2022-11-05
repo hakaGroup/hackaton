@@ -27,6 +27,7 @@ export class FridgeComponent implements OnInit {
 
   ngOnInit(): void {
     this.fridgeService.getEntries(Fridge_entries => {
+      console.log(Fridge_entries);
       this.dataSource = Fridge_entries;
     })
   }

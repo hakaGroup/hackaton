@@ -12,4 +12,8 @@ export class FridgeService {
   public getEntries(callback: (data: Fridge_entries[]) => void){
     this.fridgeClientService.getEntries().subscribe(callback);
   };
+
+  public addEntries(entries: Fridge_entries[], callback: () => void){
+    this.fridgeClientService.addEntries(entries).subscribe(callback);
+  }
 }

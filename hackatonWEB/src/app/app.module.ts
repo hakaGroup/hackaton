@@ -25,6 +25,7 @@ import {MatTableModule} from '@angular/material/table';
 import {MatIconModule} from '@angular/material/icon';
 import { AddProductComponent } from './pages/products/add-product/add-product.component';
 import { MatSelectModule } from '@angular/material/select';
+import { AddEntryComponent } from './pages/fridge/add-entry/add-entry.component';
 
 
 const InitializeConfig = (appConfig: ConfigurationService) => {
@@ -46,7 +47,8 @@ const InitializeConfig = (appConfig: ConfigurationService) => {
     GroceryListComponent,
     ProductsComponent,
     FridgeComponent,
-    AddProductComponent
+    AddProductComponent,
+    AddEntryComponent
   ],
   imports: [
     BrowserModule,
