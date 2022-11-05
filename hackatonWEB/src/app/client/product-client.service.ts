@@ -16,4 +16,8 @@ export class ProductClientService {
   public getProducts() {
     return this.httpClient.get<Product[]>(`${this.baseUrl}/api/product/index`);
   }
+
+  public addProduct(product: Product) {
+    return this.httpClient.post(`${this.baseUrl}/api/product/add`, product);
+  }
 }

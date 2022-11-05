@@ -6,6 +6,7 @@ import { FridgeComponent } from './pages/fridge/fridge.component';
 import { GroceryListComponent } from './pages/grocery-list/grocery-list.component';
 import { LoginComponent } from './pages/login/login.component';
 import { MainComponent } from './pages/main/main.component';
+import { AddProductComponent } from './pages/products/add-product/add-product.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { RegisterComponent } from './pages/register/register.component';
 
@@ -20,7 +21,8 @@ const routes: Routes = [
       { path: '', component: DashboardComponent },
       { path: 'fridge', component: FridgeComponent },
       { path: 'grocery-list', component: GroceryListComponent },
-      { path: 'products', component: ProductsComponent }
+      { path: 'products', component: ProductsComponent },
+      { path: 'products/add', component: AddProductComponent }
     ]
   }
 ];

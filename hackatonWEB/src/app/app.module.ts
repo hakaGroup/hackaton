@@ -22,7 +22,8 @@ import { ProductsComponent } from './pages/products/products.component';
 import { FridgeComponent } from './pages/fridge/fridge.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatTableModule} from '@angular/material/table';
-import {MatIconModule} from '@angular/material/icon'
+import {MatIconModule} from '@angular/material/icon';
+import { AddProductComponent } from './pages/products/add-product/add-product.component';
 
 
 const InitializeConfig = (appConfig: ConfigurationService) => {
@@ -43,7 +44,8 @@ const InitializeConfig = (appConfig: ConfigurationService) => {
     LinksComponent,
     GroceryListComponent,
     ProductsComponent,
-    FridgeComponent
+    FridgeComponent,
+    AddProductComponent
   ],
   imports: [
     BrowserModule,

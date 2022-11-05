@@ -12,4 +12,8 @@ export class ProductService {
   public getProducts(callback: (data: Product[]) => void){
     this.productClientService.getProducts().subscribe(callback);
   };
+
+  public addProduct(product: Product, callback: () => void){
+    this.productClientService.addProduct(product).subscribe(callback);
+  }
 }
