@@ -22,12 +22,10 @@ export class AuthClientService {
   }
 
   public islogged(token: string) {
-    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
-    return this.httpClient.get(`${this.baseUrl}/api/islogged`, {headers: headers});
+    return this.httpClient.get(`${this.baseUrl}/api/islogged`);
   }
 
   public logout(token: string) {
-    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
-    return this.httpClient.post(`${this.baseUrl}/api/user/logout`, null, {headers: headers});
+    return this.httpClient.post(`${this.baseUrl}/api/user/logout`,null);
   }
 }
