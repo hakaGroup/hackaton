@@ -16,4 +16,9 @@ export class FridgeClientService {
   public getEntries() {
     return this.httpClient.get<Fridge_entries[]>(`${this.baseUrl}/api/entry/fridge/get`);
   }
+
+  public addEntries(entries: Fridge_entries[]) {
+    return this.httpClient.post(`${this.baseUrl}/api/entry/add`, entries);
+  }
+
 }
