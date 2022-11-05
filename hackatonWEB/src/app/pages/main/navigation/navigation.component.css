@@ -1,0 +1,17 @@
+.nav{
+    font-size: 2rem;
+    background-color: #BFEDEF;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown{
+    font-size: 24px;
+    color: white;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 10px;
+    position: absolute;
+    right: 1%;
+}
