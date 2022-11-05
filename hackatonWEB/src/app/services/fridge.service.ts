@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { FridgeClientService } from '../client/fridge-client.service';
+import { Entry } from '../models/entry';
 import { Fridge_entries } from '../models/fridge_entries';
 
 @Injectable({
@@ -13,7 +14,7 @@ export class FridgeService {
     this.fridgeClientService.getEntries().subscribe(callback);
   };
 
-  public addEntries(entries: Fridge_entries[], callback: () => void){
-    this.fridgeClientService.addEntries(entries).subscribe(callback);
+  public addEntries(entry: Entry, callback: () => void){
+    this.fridgeClientService.addEntries(entry).subscribe(callback);
   }
 }

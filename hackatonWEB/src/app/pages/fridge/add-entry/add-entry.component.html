@@ -7,6 +7,8 @@
 
 <div *ngFor="let attr of fridge.attribute_values">
     <span *ngIf="attr.attribute">{{attr.attribute.name}}</span>
-    <input type="number" [(ngModel)]="value"/>{{attr.value}}
-    <input type="number" [(ngModel)]="criticalValue"/>{{attr.criticalValue}}
+    <input type="text" [(ngModel)]="attr.value"/>
+    <input type="text" [(ngModel)]="attr.criticalValue"/>
 </div>
+
+<button (click)="save()">Dodaj</button>

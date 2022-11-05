@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Entry } from '../models/entry';
 import { Fridge_entries } from '../models/fridge_entries';
 
 @Injectable({
@@ -17,8 +18,8 @@ export class FridgeClientService {
     return this.httpClient.get<Fridge_entries[]>(`${this.baseUrl}/api/entry/fridge/get`);
   }
 
-  public addEntries(entries: Fridge_entries[]) {
-    return this.httpClient.post(`${this.baseUrl}/api/entry/add`, entries);
+  public addEntries(entry: Entry) {
+    return this.httpClient.post(`${this.baseUrl}/api/entry/add`, entry);
   }
 
 }

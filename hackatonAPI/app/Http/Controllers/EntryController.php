@@ -90,22 +90,22 @@ class EntryController extends Controller
 
     public function addEntry (Request $request) {
         $newEntry = new Entry();
-        // return response()->json($request, 200);
-        $newEntry->product_id = $request->product->id;
+        $newEntry->product_id = $request->product['id'];
         $newEntry->save();
 
-        foreach ($request->Entry_attribute_value->get() as $entryAttributeValue)
+        foreach ($request->attribute_values as $entryAttributeValue)
         {
             $newEntryAttribute = new Entry_attribute_value();
             $newEntryAttribute->entry_id = $newEntry->id;
-            $newEntryAttribute->attribute_id = $entryAttributeValue->attribute->id;
-            $newEntryAttribute->value = $entryAttributeValue->value;
-            $newEntryAttribute->critical_value = $entryAttributeValue->criticalValue;
+            $newEntryAttribute->attribute_id = $entryAttributeValue['attribute']['id'];
+            $newEntryAttribute->value = $entryAttributeValue['value'];
+            $newEntryAttribute->critical_value = $entryAttributeValue['criticalValue']??null;
             $newEntryAttribute->save();
         }
 
-        // $newFridgeEntry = new Fridge_entry();
-        // $newFridgeEntry->user_id = Auth::user()->id;
-        // $newFridgeEntry->entry_id = $newEntry->id;
+        $newFridgeEntry = new Fridge_entry();
+        $newFridgeEntry->user_id = Auth::user()->id;
+        $newFridgeEntry->entry_id = $newEntry->id;
+        $newFridgeEntry->save();
     }
 }
