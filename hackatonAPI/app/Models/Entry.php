@@ -10,6 +10,6 @@ class Entry extends Model
     use HasFactory;
 
     protected $fillable = [
-      'prod_id'
+      'product_id'
     ];
 }

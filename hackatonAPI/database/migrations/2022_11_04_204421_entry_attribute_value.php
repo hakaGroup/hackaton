@@ -17,6 +17,7 @@ class EntryAttributeValue extends Migration
             $table->unsignedBigInteger('entry_id');
             $table->unsignedBigInteger('attribute_id');
             $table->string('value');
+            $table->timestamps();
         });
 
         Schema::table('entry_attribute_value', function (Blueprint $table){

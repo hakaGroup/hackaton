@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Models\Product;
 use App\Models\Products_attribute;
+use App\Models\Attribute;
 
 class ProductController extends Controller
 {
@@ -13,7 +14,7 @@ class ProductController extends Controller
         $found = False;
         $product = Product::where('name', $request->name)->first();
         if ($product) {
-            $attributes = Products_attribute::where('prod_id', $product->id())->get();
+            $attributes = Products_attribute::where('prod_id', $product->id)->get();
 
             if($attributes == $request->attributes)
             {
@@ -50,6 +51,26 @@ class ProductController extends Controller
     }
 
     public function indexProduct () {
-        return Product::all();
+        $products = Product::all();
+
+        $result = [];
+
+        foreach ($products as $product)
+        {
+            $attributes = Products_attribute::where('product_id', $product->id)->get();
+            $attrs = [];
+            foreach($attributes as $attribute)
+            {
+                $attr = Attribute::find($attribute->attribute_id);
+                array_push($attrs, $attr);
+            }
+            $result[] = [
+                "id" => $product->id,
+                "name" => $product->name,
+                "attributes" => $attrs
+            ];
+        }
+
+        return response()->json($result, 200);
     }
 }

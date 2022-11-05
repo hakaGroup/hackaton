@@ -16,6 +16,7 @@ class Entries extends Migration
         Schema::create('entries', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('product_id');
+            $table->timestamps();
         });
 
         Schema::table('entries', function (Blueprint $table){

@@ -10,8 +10,8 @@ class Entry_attribute_value extends Model
     use HasFactory;
 
     protected $fillable = [
-        'ent_id',
-        'attr_id',
+        'entry_id',
+        'attribute_id',
         'value'
     ];
 }
