@@ -14,6 +14,6 @@ export class FridgeClientService {
   }
 
   public getEntries() {
-    return this.httpClient.get<Fridge_entries[]>(`${this.baseUrl}/api/product/index`); //zmienic endpoint!!!!!
+    return this.httpClient.get<Fridge_entries[]>(`${this.baseUrl}/api/entry/fridge/get`);
   }
 }
