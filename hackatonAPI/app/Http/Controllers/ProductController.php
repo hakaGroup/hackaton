@@ -14,7 +14,7 @@ class ProductController extends Controller
         $found = False;
         $product = Product::where('name', $request->name)->first();
         if ($product) {
-            $attributes = Products_attribute::where('prod_id', $product->id)->get();
+            $attributes = Products_attribute::where('product_id', $product->id)->get();
 
             if($attributes == $request->attributes)
             {
@@ -27,12 +27,13 @@ class ProductController extends Controller
             $newProduct = new Product();
             $newProduct->name = $request->name;
             $newProduct->save();
-
-
+        return response()->json(['test' => $request->attributes], 200);
             foreach ($request->attributes as $attribute) {
                 $newProductAttributes = new Products_attribute();
-                $newProductAttributes->prod_id = $newProduct->id;
-                $newProductAttributes->attr_id = $attribute->id;
+                $newProductAttributes->product_id = $newProduct->id;
+                $newProductAttributes->attribute_id = $attribute->id;
+                // $newProductAttributes->name -> $attribute->name;
+                // $newProductAttributes->is_required -> $attribute->is_required;
                 $newProductAttributes->save();
             }
         }

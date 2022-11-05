@@ -18,7 +18,6 @@ class Attributes extends Migration
             $table->string('name');
             $table->unsignedBigInteger('type_id');
             $table->boolean('is_required');
-            $table->decimal('critical_value')->nullable();
             $table->timestamps();
         });
 

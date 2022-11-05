@@ -12,6 +12,9 @@ class Entry_attribute_value extends Model
     protected $fillable = [
         'entry_id',
         'attribute_id',
-        'value'
+        'value',
+        'critical_value'
     ];
+
+    protected $table = 'entry_attribute_value';
 }

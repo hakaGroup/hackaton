@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\AttributeController;
+use App\Http\Controllers\EntryController;
 
 use App\Models\User;
 
@@ -34,4 +35,9 @@ Route::middleware('auth:sanctum')->group(function(){
     Route::get('/product/index', [ProductController::class, 'indexProduct']);
 
     Route::get('/attributes/index', [AttributeController::class, 'indexAttribute']);
+    
+    Route::post('/entry/add', [EntryController::class, 'addEntry']);
+    Route::get('/entry/get/{id}', [EntryController::class, 'getEntry']);
+    Route::get('/entry/fridge/get', [EntryController::class, 'getAllUserEntries']);
+
 });

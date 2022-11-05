@@ -17,6 +17,7 @@ class EntryAttributeValue extends Migration
             $table->unsignedBigInteger('entry_id');
             $table->unsignedBigInteger('attribute_id');
             $table->string('value');
+            $table->decimal('critical_value')->nullable();
             $table->timestamps();
         });
 

@@ -12,7 +12,6 @@ class Attribute extends Model
     protected $fillable = [
         'name',
         'type_id',
-        'is_required',
-        'critical_value'
+        'is_required'
     ];
 }
