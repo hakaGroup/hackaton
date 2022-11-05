@@ -17,9 +17,9 @@ import { NavigationComponent } from './pages/main/navigation/navigation.componen
 import { UserComponent } from './pages/main/user/user.component';
 import { LinksComponent } from './pages/main/links/links.component';
 import { CommonModule } from '@angular/common';
-import { FridgeComponent } from './pages/fridge/fridge.component';
 import { GroceryListComponent } from './pages/grocery-list/grocery-list.component';
 import { ProductsComponent } from './pages/products/products.component';
+import { FridgeComponent } from './pages/fridge/fridge.component';
 
 
 const InitializeConfig = (appConfig: ConfigurationService) => {
@@ -38,9 +38,9 @@ const InitializeConfig = (appConfig: ConfigurationService) => {
     NavigationComponent,
     UserComponent,
     LinksComponent,
-    FridgeComponent,
     GroceryListComponent,
-    ProductsComponent
+    ProductsComponent,
+    FridgeComponent,
   ],
   imports: [
     BrowserModule,
