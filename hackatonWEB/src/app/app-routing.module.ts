@@ -2,8 +2,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuardService } from './client/auth-guard.service';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { FridgeComponent } from './pages/fridge/fridge.component';
+import { GroceryListComponent } from './pages/grocery-list/grocery-list.component';
 import { LoginComponent } from './pages/login/login.component';
 import { MainComponent } from './pages/main/main.component';
+import { ProductsComponent } from './pages/products/products.component';
 import { RegisterComponent } from './pages/register/register.component';
 
 const routes: Routes = [
@@ -14,7 +17,10 @@ const routes: Routes = [
   {
     path: 'panel', component: MainComponent, canActivate: [AuthGuardService],
     children: [
-      { path: '', component: DashboardComponent }
+      { path: '', component: DashboardComponent },
+      { path: 'fridge', component: FridgeComponent },
+      { path: 'grocery-list', component: GroceryListComponent },
+      { path: 'products', component: ProductsComponent }
     ]
   }
 ];
