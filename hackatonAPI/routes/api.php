@@ -35,9 +35,10 @@ Route::middleware('auth:sanctum')->group(function(){
     Route::get('/product/index', [ProductController::class, 'indexProduct']);
 
     Route::get('/attributes/index', [AttributeController::class, 'indexAttribute']);
-    
+
     Route::post('/entry/add', [EntryController::class, 'addEntry']);
     Route::get('/entry/get/{id}', [EntryController::class, 'getEntry']);
     Route::get('/entry/fridge/get', [EntryController::class, 'getAllUserEntries']);
+    // Route::post('/entry/add', [EntryController::class, 'addEntry']);
 
 });

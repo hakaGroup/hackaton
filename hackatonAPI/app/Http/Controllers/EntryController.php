@@ -15,34 +15,34 @@ use Collection;
 
 class EntryController extends Controller
 {
-    public function addEntry (Request $request) {
-        $found = False;
-        $entry = Entry::where('product_id', $request->product_id)->first();
-        if ($entry) {
-            $attributes = Products_attribute::where('prod_id', $entry->id())->get();
-
-            if($attributes == $request->attributes)
-            {
-                $found = True;
-            }
-        }
-
-        if(!$found)
-        {
-            $newEntry = new Entry();
-            $newEntry->product_id = $request->product_id;
-            $newEntry->save();
-
-
-            foreach ($request->attributes as $attribute) {
-                $newEntryAttributes = new Entry_attribute_value();
-                $newEntryAttributes->product_id = $newEntry->id;
-                $newEntryAttributes->attribute_id = $attribute->id;
-                $newEntryAttributes->value = $request->value;
-                $newEntryAttributes->save();
-            }
-        }
-    }
+    // public function addEntry (Request $request) {
+    //     $found = False;
+    //     $entry = Entry::where('product_id', $request->product_id)->first();
+    //     if ($entry) {
+    //         $attributes = Products_attribute::where('prod_id', $entry->id())->get();
+    //
+    //         if($attributes == $request->attributes)
+    //         {
+    //             $found = True;
+    //         }
+    //     }
+    //
+    //     if(!$found)
+    //     {
+    //         $newEntry = new Entry();
+    //         $newEntry->product_id = $request->product_id;
+    //         $newEntry->save();
+    //
+    //
+    //         foreach ($request->attributes as $attribute) {
+    //             $newEntryAttributes = new Entry_attribute_value();
+    //             $newEntryAttributes->product_id = $newEntry->id;
+    //             $newEntryAttributes->attribute_id = $attribute->id;
+    //             $newEntryAttributes->value = $request->value;
+    //             $newEntryAttributes->save();
+    //         }
+    //     }
+    // }
 
     public function getEntry ($id) {
         $entry = Entry::find($id);
@@ -86,5 +86,26 @@ class EntryController extends Controller
         }
         return $entries;
         // return Product::all();
+    }
+
+    public function addEntry (Request $request) {
+        $newEntry = new Entry();
+        // return response()->json($request, 200);
+        $newEntry->product_id = $request->product->id;
+        $newEntry->save();
+
+        foreach ($request->Entry_attribute_value->get() as $entryAttributeValue)
+        {
+            $newEntryAttribute = new Entry_attribute_value();
+            $newEntryAttribute->entry_id = $newEntry->id;
+            $newEntryAttribute->attribute_id = $entryAttributeValue->attribute->id;
+            $newEntryAttribute->value = $entryAttributeValue->value;
+            $newEntryAttribute->critical_value = $entryAttributeValue->criticalValue;
+            $newEntryAttribute->save();
+        }
+
+        // $newFridgeEntry = new Fridge_entry();
+        // $newFridgeEntry->user_id = Auth::user()->id;
+        // $newFridgeEntry->entry_id = $newEntry->id;
     }
 }
