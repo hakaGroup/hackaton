@@ -95,4 +95,12 @@ tr.example-element-row:not(.example-expanded-row):active {
 .attribute{
 
     padding: 0rem 1rem 1rem 1rem;
+.img-cont{
+    position: absolute;
+    height: 90vh;
+    width: 100%;
+    background-image: url('/assets/images/lodowka1.png');
+    background-repeat: no-repeat;
+    background-position: 65% 20%;
+    opacity: 0.1;
 }
