@@ -1,0 +1,30 @@
+.row{
+    position: absolute;
+    top:30%;
+    left: 20%;
+    width: 300px;
+    align-items: center ;
+    justify-content: center;
+}
+
+.lmao{
+    border-style: solid;
+    padding: 1rem 2rem 1rem 2rem;
+    border-radius: 2rem;
+}
+
+.but{
+    background-color: rgb(253, 202, 209);
+    padding: 1rem 2rem 1rem 2rem;
+    border-radius: 2rem;
+}
+
+.img-cont{
+    z-index: -1000;
+    position: absolute;
+    height: 100%;
+    background-image: url('/assets/images/lodowka1.png');
+    background-repeat: no-repeat;
+    background-position: 65% 20%;
+    opacity: 0.1;
+}

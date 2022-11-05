@@ -1,14 +1,21 @@
-<mat-select [(ngModel)]="selectedProduct" placeholder="wybierz produkt" (ngModelChange)="changeProd()">
-    <mat-option *ngFor="let product of products" [value]="product">
-        {{product.name}}
-        <span *ngFor="let attr of product.attributes">{{attr.name}}</span>
-    </mat-option>
-</mat-select>
-
-<div *ngFor="let attr of fridge.attribute_values">
-    <span *ngIf="attr.attribute">{{attr.attribute.name}}</span>
-    <input type="text" [(ngModel)]="attr.value"/>
-    <input type="text" [(ngModel)]="attr.criticalValue"/>
+<div class = "img-cont container-fluid">
+</div>  
+<div class="row">
+    <div class="lmao col-6">
+        <mat-select [(ngModel)]="selectedProduct" placeholder="wybierz produkt" (ngModelChange)="changeProd()">
+        <mat-option *ngFor="let product of products" [value]="product">
+            {{product.name}}
+            <span *ngFor="let attr of product.attributes">{{attr.name}}</span>
+        </mat-option>
+    </mat-select>
+    </div>
+    <div class="col-6">
+        <div *ngFor="let attr of fridge.attribute_values">
+        <span *ngIf="attr.attribute">{{attr.attribute.name}}</span>
+        <input placeholder="wartość" type="text" [(ngModel)]="attr.value"/>
+        <input placeholder="wartość-krytyczna" type="text" [(ngModel)]="attr.criticalValue"/>
+    </div>
+    
+    <button class = "but" (click)="save()">Dodaj</button>
+</div>  
 </div>
-
-<button (click)="save()">Dodaj</button>
