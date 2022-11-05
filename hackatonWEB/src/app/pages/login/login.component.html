@@ -1,16 +1,24 @@
 <div class = "nav">
     <div class="navbar-brand">FRIDŻUŚ OwO</div>
 </div>
-    <div id = "login">
-        <div id = "login-items">
-            <div class = field-input><input class = "search-bar" type="email" placeholder="email" [(ngModel)]="login.email"/></div>
-            <div class = field-input><input class = "search-bar" type="password" placeholder="hasło" [(ngModel)]="login.password"/></div>
-            <div class = field-input><button class = "button" (click)="onLogin()">Zaloguj się</button></div>
-            <p class = "text">Nie masz konta? <a href = "https://youtu.be/YdfNuwMhMg4">Zarejestruj się</a></p>
+<div class="row">
+    <div class="col-md-6">
+        <div id = "login">
+            <div id = "login-items">
+                <div class = field-input><input class = "search-bar" type="email" placeholder="email" [(ngModel)]="login.email"/></div>
+                <div class = field-input><input class = "search-bar" type="password" placeholder="hasło" [(ngModel)]="login.password"/></div>
+                <div class = field-input><button class = "button" (click)="onLogin()">Zaloguj się</button></div>
+                <p class = "text">Nie masz konta? <a href = "https://youtu.be/YdfNuwMhMg4">Zarejestruj się</a></p>
+            </div>
+            <div id = "menu-background-pattern"></div>
+            <div class = "login-background-image"></div>
         </div>
-        <div id = "menu-background-pattern"></div>
-        <div class = "login-background-image"></div>
     </div>
+    <div class="col-md-6">
+        <img class = "lodowka1" src="assets/images/lodowka1.png" alt="">
+    </div>
+</div>
+
 
     <div class = "error-message" *ngIf="error">
         {{error.message}}
