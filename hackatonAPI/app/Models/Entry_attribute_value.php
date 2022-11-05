@@ -14,4 +14,6 @@ class Entry_attribute_value extends Model
         'attribute_id',
         'value'
     ];
+
+    protected $table = 'entry_attribute_value';
 }

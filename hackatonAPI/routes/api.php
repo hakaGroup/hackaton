@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\EntryController;
 
 use App\Models\User;
 
@@ -31,4 +32,7 @@ Route::middleware('auth:sanctum')->group(function(){
     Route::post('/product/add', [ProductController::class, 'addProduct']);
     Route::get('/product/get/{id}', [ProductController::class, 'getProduct']);
     Route::get('/product/index', [ProductController::class, 'indexProduct']);
+
+    Route::post('/entry/add', [EntryController::class, 'addEntry']);
+    Route::get('/entry/get/{id}', [EntryController::class, 'getEntry']);
 });
